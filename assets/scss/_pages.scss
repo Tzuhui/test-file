@@ -1,0 +1,357 @@
+.wrap {
+  background-color: #F0E9D7;
+  color: $dark;
+}
+
+.banner {
+  height: 757px;
+  background-image: url('../assets/images/banner1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include screen(md) {
+    height: 461px;
+  }
+  @include screen(sm) {
+    height: 248px;
+  }
+}
+
+// lion 對話筐
+.talking {
+  text-align: center;
+  &-lion {
+    @include screen(md) {
+      width: 96px;
+    }
+    @include screen(sm) {
+      width: 80px;
+    }
+  }
+  &-content {
+    box-shadow: 4px 4px $dark;
+    position: relative;
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-text {
+    width: 100%;
+    font-size: 22px;
+    position: absolute;
+    @include screen(md) {
+      padding-left: 16px;
+    }
+    @include screen(sm) {
+      font-size: 18px;
+    }
+  }
+}
+
+// 紅包區塊
+.envelope {
+  position: relative;
+  margin: 8px;
+  margin-bottom: 24px;
+  &-content {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #F0E9D7;
+    @include screen(md) {
+      bottom: 20px;
+    }
+    @include screen(sm) {
+      bottom: 30%;
+    }
+    .price {
+      font-size: 60px;
+      margin-right: 8px;
+      @include screen(md) {
+        font-size: 36px;
+      }
+      @include screen(sm) {
+        font-size: 22px;
+      }
+    }
+    .text {
+      font-size: 18px;
+      @include screen(md) {
+        font-size: 14px;
+      }
+    }
+  }
+  &-text {
+    font-size: 14px;
+    img {
+      margin-right: 8px;
+    }
+  }
+}
+
+.window {
+  position: relative;
+  z-index: 2;
+  box-shadow: 4px 4px $dark;
+  &-header {
+    height: 21px;
+    background-color: $dark;
+  }
+  &-body {
+    background-color: #F0E9D7;
+    border-left: 2px solid $primary;
+    border-right: 2px solid $primary;
+    border-bottom: 2px solid $primary;
+    text-align: center;
+    padding: 24px 0;
+    p {
+      font-size: 28px;
+      @include screen(md) {
+        font-size: 18px;
+      }
+    }
+  }
+  .swiper-pagination-bullet {
+    width: auto;
+    height: auto;
+    opacity: 1;
+    background: none;
+  }
+  .slide-bullet {
+    margin: 16px 16px 0px 16px;
+    color: $dark;
+    @include screen(sm) {
+      margin: 8px 8px 0px 8px;
+    }
+    .slide-bullet-bg {
+      width: 93px;
+      height: 93px;
+      background-image: url('../assets/images/window/cat-out.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      @include screen(sm) {
+        width: 56px;
+        height: 56px;
+      }
+    }
+    &:hover, &.swiper-pagination-bullet-active {
+      color: lighten($dark, 15%);
+      .slide-bullet-bg {
+        background-image: url('../assets/images/window/cat-in.png');
+      }
+    }
+    p {
+      position: absolute;
+    }
+  }
+}
+
+
+.hot-course {
+  padding-top: 150px;
+  padding-bottom: 80px;
+  margin-top: -156px;
+  background-color: #E2D7C0;
+  &-area {
+    overflow: hidden;
+    background-color: $primary;
+    width: 80%;
+    display: flex;
+    position: relative;
+    margin-top: 24px;
+    @include screen(sm) {
+      margin-top: 36px;
+      flex-direction: column;
+      width: 95%;
+    }
+  }
+  &-top {
+    margin-right: auto;
+    & .hot-course-content {
+      margin-left: auto;
+    }
+    .course-intro {
+      margin-right: 18px;
+    }
+    .course-icon {
+      top: 0px;
+      position: absolute;
+      left: 0px;
+      width: 25%;
+      transform: translateX(-80px);
+      img {
+        width: 100%;
+      }
+      @include screen(md) {
+        transform: translateX(-15%);
+        width: 30%;
+      }
+      @include screen(sm) {
+        width: 20%;
+        right: 100%;
+      }
+    }
+  }
+  .img-firecracker {
+    position: absolute;
+    transform: translateY(-25%);
+    left: 0;
+    z-index: 2;
+    width: 30%;
+    @include screen(md) {
+      width: 30%;
+    }
+    @include screen(sm) {
+      left: auto;
+      transform: translate(0%, 5%);
+      width: auto;
+      right: 0;
+    }
+  }
+  .img-firecracker-2 {
+    position: absolute;
+    bottom: 50px;
+    right: 5%;
+    z-index: 2;
+    img {
+      width: 100%;
+      margin-left: auto;
+      @include screen(md) {
+        width: 50%;
+      }
+    }
+    @include screen(sm) {
+      left: -30px;
+      right: auto;
+      top: 52%;
+      bottom: 0;
+    }
+  }
+  &-bottom {
+    margin-left: auto;
+    @include screen(sm) {
+      margin-top: 36px;
+      flex-direction: column;
+      width: 95%;
+    }
+    .course-intro {
+      margin-left: 18px;
+    }
+    & .hot-course-content {
+      flex-direction: row-reverse;
+      margin-right: auto;
+      padding: 24px;
+      padding-left: 45px;
+      @include screen(md) {
+        padding-left: 24px;
+      }
+      @include screen(sm) {
+        flex-direction: column;
+      }
+    }
+    .course-icon {
+      bottom: 0px;
+      position: absolute;
+      right: 0;
+      width: 25%;
+      transform: translate(80px, 50%);
+      img {
+        width: 100%;
+      }
+      @include screen(md) {
+        width: 30%;
+      }
+      @include screen(sm) {
+        transform: translate(10px, -30%);
+        top: 0px;
+        bottom: auto;
+        right: 0px;
+      }
+    }
+  }
+  &-content {
+    max-width: 815px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    padding: 24px;
+    @include screen(md) {
+      max-width: 95%;
+    }
+    @include screen(sm) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 45px;
+      max-width: 100%;
+    }
+    .command {
+      border: 2px solid $secondary;
+      box-shadow: 4px 4px $dark;
+      background-color: #F0E9D7;
+      padding: 16px;
+      width: 40%;
+      @include screen(md) {
+        width: 50%;
+      }
+      @include screen(sm) {
+        margin-top: 24px;
+        width: 100%;
+      }
+    }
+    .star {
+      color: $third;
+      margin-bottom: 16px;
+      font-size: 20px;
+      i {
+        margin: 0 4px;
+      }
+    }
+    .title {
+      white-space: nowrap;
+      .highlight {
+        font-size: 42px;
+        @include screen(md) {
+          font-size: 36px;
+        }
+      }
+      font-size: 28px;
+      color: $white;
+      font-weight: bold;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 2;
+      @include screen(md) {
+        font-size: 18px;
+      }
+      @include screen(sm) {
+        font-size: 18px;
+      }
+    }
+    .detail {
+      margin-right: 16px;
+      font-size: 20px;
+      @include screen(md) {
+        font-size: 16px;
+      }
+    }
+    .price {
+      font-size: 36px;
+      font-weight: bold;
+      color: $third;
+      @include screen(md) {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+.swiper-button-next, .swiper-button-prev {
+
+}
+
